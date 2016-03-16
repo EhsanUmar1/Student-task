@@ -1,0 +1,29 @@
+{
+  "name": "student-app",
+  "description": "\"A student task client side app in which teacher can add stud",
+  "main": "js/app.js",
+  "authors": [
+    "UmarEhsan <ehsanumar123@outlook.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "\"Angular",
+    "\""
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-new-router": "~0.5.3",
+    "angular": "~1.4.1"
+  },
+  "install" : {
+    "path" : "libs"
+  }
+}

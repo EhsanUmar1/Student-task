@@ -1,0 +1,104 @@
+<style>
+    body{
+
+        width:80%;
+        margin:0 auto ;
+        background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+        height:800px ;
+    }
+    h1{
+        text-align: center;
+        font-size:60px ;
+        min-width: 700px;
+
+    }
+    h2{
+        text-align: center;
+    }
+    #views{
+        border-radius:2% ;
+        width:80% ;
+        margin:0 auto ;
+        height:450px ;
+        margin-top:10% ;
+        background-color:rgba(255,255,255,.8);
+        color:#55acee;
+        max-width:1000px ;
+        min-width:700px ;
+
+
+    }
+
+    tr{
+        text-align: right;
+    }
+    td{
+        text-align: left;
+    }
+
+    table{
+        margin-top:3% ;
+        min-width: 400px;
+    }
+</style>
+
+
+
+<div class="container-fluid">
+   <h1>Student App</h1>
+    <h1>{{view.show}}</h1>
+
+        <div id="views">
+            <h2>View Users</h2>
+            <table class="table ">
+                <thead>
+                <tr>
+                    <th>sNo#</th>
+                    <th>Name</th>
+                    <th >Email</th>
+                    <th>Password</th>
+                    <th>Roll No</th>
+                    <th>Class</th>
+                    <th>Action</th>
+                    <th>Move</th>
+                    <th>Give Tasks</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="p in view.showData">
+                    <td>{{$index + 1001 }}</td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.email}}</td>
+                    <td>{{p.password}}</td>
+                    <td>{{p.rollNo}}</td>
+                    <td>{{p.class}}</td>
+                    <td><a ng-link="edit({id: $index})">
+                        <span class="glyphicon glyphicon-edit">Edit</span>
+                    </a>
+                        <a ng-click="view.delete($index)">
+                            <span class="glyphicon glyphicon-remove-sign">Remove</span>
+                        </a>
+                    </td>
+
+                    <!--<td>
+                        <a ng-click="view.move( $index , 'down' )">
+                            <span class="glyphicon glyphicon-arrow-down">Down</span>
+
+                        </a>
+                        <a ng-click="view.move( $index , 'up' )" >
+                            <span class="glyphicon glyphicon-arrow-up">Up</span>
+                        </a>
+
+                    </td>-->
+                    <td>
+                        <a ng-link="task({ide: $index})">Add Task</a>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <!---->
+    </div>

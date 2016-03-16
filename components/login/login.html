@@ -1,0 +1,103 @@
+<!--{{login.email}}
+{{login.pass}}-->
+
+<style >
+
+    body{
+
+        margin:0 auto ;
+        width:80%;
+        height:800px ;
+       /* background: -webkit-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* Chrome 10+, Saf5.1+ *!/
+        background:    -moz-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* FF3.6+ *!/
+        background:     -ms-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* IE10 *!/
+        background:      -o-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* Opera 11.10+ *!/
+        background:         linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* W3C *!/
+        font-family: 'Raleway', sans-serif;*/
+        background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+
+    }
+    h1{
+        text-align: center;
+        font-size:60px ;
+
+    }
+    h2{
+       color:#496ebc
+    /*color:#55acee;*/
+
+    }
+    #admin{
+        width:40%;
+        color:#55acee;
+        background-color:rgba(255,255,255,.8);
+        float: left;
+        margin-top:10% ;
+        margin-left:10% ;
+        height:280px ;
+        min-width: 250px;
+        border-radius:2% ;
+
+    }
+    #student{
+        width:40% ;
+        border-radius:2% ;
+        float: left;
+        margin-left:5% ;
+        margin-top:15% ;
+        height:280px ;
+        background-color:rgba(255,255,255,.8);
+        min-width: 250px;
+
+
+    }
+
+</style>
+
+<h1>Student App</h1>
+
+<div id="admin" class="container">
+    <h2>Admin Login</h2>
+    <form role="form">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" ng-model="login.email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" ng-model="login.pass" class="form-control" id="pwd" placeholder="Enter password">
+        </div>
+
+        <button ng-click="login.adminLogin('/student')" type="submit" class="btn btn-primary btn-block">Login</button>
+
+    </form>
+</div>
+<div id="student" class="container">
+    <h2>Student Login</h2>
+    <form role="form">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" ng-model="login.studentEmail" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" ng-model="login.studentPass" class="form-control" id="pwd" placeholder="Enter password">
+        </div>
+
+        <button ng-click="login.studentLogin('/final')" type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+</div>
+
+
+
+<!--<input type="text" ng-model="login.email">
+<input type="text" ng-model="login.pass">
+<button ng-click="login.studentData('/student')">Login</button>-->
+
+
+
+
+
+
+
+

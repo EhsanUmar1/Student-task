@@ -1,0 +1,72 @@
+<Style>
+    body{
+
+        margin:0 auto ;
+        width:80%;
+        height:800px ;
+        /* background: -webkit-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* Chrome 10+, Saf5.1+ *!/
+         background:    -moz-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* FF3.6+ *!/
+         background:     -ms-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* IE10 *!/
+         background:      -o-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* Opera 11.10+ *!/
+         background:         linear-gradient(90deg, #16222A 10%, #3A6073 90%); /!* W3C *!/
+         font-family: 'Raleway', sans-serif;*/
+        background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+
+    }
+    #tasks{
+        width:40% ;
+        margin:0 auto ;
+        height:450px ;
+        margin-top:10% ;
+        background-color:rgba(255,255,255,.8);
+        color:#55acee;
+        min-width: 250px;
+        border-radius:2% ;
+
+
+    }
+    h1{
+        text-align: center;
+        font-size:60px ;
+        min-width: 250px;
+
+    }
+    h2{
+        color:#496ebc;
+        text-align:center ;
+        /*color:#55acee;*/
+
+    }
+</Style>
+
+
+<!--{{email}}-->
+<h1>Student App</h1>
+
+<div id="tasks">
+    <h2>Tasks</h2>
+
+
+    <!--<li ng-repeat="f in final.show">{{f.name}}</li>-->
+    <table class="table table-striped ">
+        <thead>
+        <tr>
+
+            <th><h4 style="text-align: center">{{final.nameStd}}</h4></th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat="task in final.tasks">
+            <td>{{task.name}}</td>
+
+
+        </tr>
+        </tbody>
+
+    </table>
+    <button type="button"class="btn btn-primary btn-block" ng-click="final.logOut('/login')">LogOut</button></div>
+
+</div>
+

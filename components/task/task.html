@@ -1,0 +1,62 @@
+<style>
+    body{
+
+        width:100%;
+        margin:0 auto ;
+        height:800px;
+        background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+
+    }
+    h1{
+        text-align: center;
+        font-size:60px ;
+        min-width: 250px;
+
+    }
+    #students{
+
+        width:40% ;
+        margin:0 auto ;
+        height:450px ;
+        margin-top:10% ;
+        background-color:rgba(255,255,255,.8);
+        color:#55acee;
+        min-width: 250px;
+        border-radius:2% ;
+
+    }
+    .form-group{
+        margin-top:5% ;
+    }
+</style>
+
+
+<p>{{task.show}}</p>
+<p>{{task.try}}</p>
+<div class="container-fluid">
+    <h1>Student App</h1>
+    <div id="students">
+        <h2>Add Tasks</h2>
+        <form role="form">
+
+            <div class="form-group">
+
+                <input type="text" ng-model="task.tasks.name" class="form-control" placeholder="Enter Task">
+            </div>
+
+
+            <button type="button" id="submit"  ng-click="task.click()" class="btn btn-primary btn-block">Add Task</button>
+            <button type="button"   ng-click="task.viewTask('/student')" class="btn btn-primary btn-block">Add Students Task</button>
+            <button type="button"   ng-click="task.viewTask('/login')" class="btn btn-primary btn-block">LogOut</button>
+        </form>
+
+    </div>
+
+
+</div>
+
+<!--
+<input type="text" ng-model="task.tasks.name">
+<button ng-click="task.click()">WorkHard</button>\
+<button ng-click="task.viewTask('/student')">Add Students</button>
+<button ng-click="task.viewTask('/login')">Log Out</button>-->

@@ -1,0 +1,87 @@
+<style>
+    body{
+
+        width:100%;
+        margin:0 auto ;
+        height:800px;
+        background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+
+    }
+    h1{
+        text-align: center;
+        font-size:60px ;
+
+    }
+    h2{
+        color:#496ebc;
+        text-align:center ;
+        /*color:#55acee;*/
+
+    }
+    #students{
+
+        border-radius:2% ;
+        width:40% ;
+        margin:0 auto ;
+        height:650px ;
+        margin-top:10% ;
+        background-color:rgba(255,255,255,.8);
+        color:#55acee;
+        min-width: 250px;
+
+    }
+.form-group{
+    margin-top:5% ;
+}
+
+</style>
+<h1>Student App</h1>
+
+<div id="contain" class="container-fluid">
+<div id="students">
+    <h2>Add Students</h2>
+    <form role="form">
+
+        <div class="form-group">
+
+            <input type="text" ng-model="student.students.name" class="form-control" id="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+
+            <input type="email" ng-model="student.students.email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+
+        <div class="form-group">
+
+            <input type="password" ng-model="student.students.password" class="form-control" id="pwd" placeholder="Enter Password">
+        </div>
+        <div class="form-group">
+
+            <input type="number" ng-model="student.students.rollNo" class="form-control" id="rollN" placeholder="Enter RollNo">
+        </div>
+
+        <div class="form-group">
+            <h4>Select Class</h4>
+            <select  ng-model="student.students.class" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+
+            </select>
+        </div>
+
+        <button type="button"  style="margin-top:20px "  ng-click="student.saveStudents()" class="btn btn-primary btn-block">Save Student</button>
+        <button type="button" style="margin-top: 40px" class="btn btn-primary btn-block" ng-click="student.view('/view')">View Students</button></div>
+
+    </form>
+
+</div>
+
+
+</div>
+
+
+
+
